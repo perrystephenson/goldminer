@@ -1,0 +1,12 @@
+Package: goldminer
+Title: Simulate the Operation of a Gold Mine
+Version: 0.0.0.9000
+Authors@R: person("Perry", "Stephenson", email = "perry.stephenson@gmail.com", 
+    role = c("aut", "cre"))
+Description: Functions to simulate the operation of a gold mine, based on the
+    specification given in the UTS Data and Decision Making course.
+Depends: R (>= 3.4.4)
+License: CC0
+Encoding: UTF-8
+LazyData: true
+Imports: dplyr
