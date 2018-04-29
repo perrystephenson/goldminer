@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 # goldminer
 
 This package provides functions to simulate the operation of a gold mine, as
-required in the UTS course Data and Decision Making.
+required in the UTS course Data and Decision Making. 
 
 ## Installation
 
@@ -26,10 +26,3 @@ You can install goldminer from github with:
 devtools::install_github("perrystephenson/goldminer")
 ```
 
-## Example
-
-This is a basic example which shows you how to solve a common problem:
-
-```{r example}
-## basic example code
-```
