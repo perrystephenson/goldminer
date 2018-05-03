@@ -46,7 +46,7 @@ profits_with_search <- function(env1, env3, params, sell_m2=0, search=0) {
 
     # Update costs for simulations still looking
     search_price <- params$search_price[[search]]
-    search_costs[!mine_found,i] <- search_price
+    search_costs[[i]][!mine_found] <- search_price
 
     # See which sims find it this round
     search_rand <- runif(sum(!mine_found))
@@ -87,7 +87,9 @@ profits_with_search <- function(env1, env3, params, sell_m2=0, search=0) {
 
     # Manually reset the cash to last year's value if < 4 million negative
     broke_rows <- cash[[i-1]] < -4e6L
-    cash[broke_rows, i] <- cash[broke_rows, i-1]
+    if (any(broke_rows)) {
+      cash[broke_rows,i] <- cash[broke_rows, i-1]
+    }
 
     # Calculate interest on the cash balance (split pos and neg)
     interest_charge[[i]] <- env1$interest_rate[[i]] * cash[[i]]
